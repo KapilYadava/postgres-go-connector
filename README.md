@@ -9,14 +9,14 @@ https://www.youtube.com/watch?v=fvpq4jqtuZ8
 
 # Option-1
 
-# headless-service 
-# service without selectors
+## headless-service 
+## service without selectors
 https://kubernetes.io/docs/concepts/services-networking/service/#services-without-selectors
 
 
-#Option-2
+# Option-2
 
-# ExternalName service
+## ExternalName service
 
 apiVersion: v1
 kind: Service
