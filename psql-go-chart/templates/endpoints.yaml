@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Endpoints
+metadata:
+  name: psql # endpoint name must be same as service name
+subsets:
+  - addresses:
+    - ip: 192.168.49.3  # external service ip
+                        # Ip address of container where application is deployed (docker network which enable communication between docker containers) 
+                        #CMD Used - docker inspect container-name | grep IPAddress
+    ports:
+    - port: 5432  # external service port (psql port)
