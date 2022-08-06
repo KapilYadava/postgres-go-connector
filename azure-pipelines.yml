@@ -38,11 +38,12 @@ stages:
         tags: |
           $(tag)
     - task: HelmDeploy@0
-    inputs:
-      connectionType: 'Azure Resource Manager'
-      azureSubscription: 'Free Trial(9aa7f2ca-18ba-4733-abc7-a3824511edf0)'
-      azureResourceGroup: 'azuretestrg'
-      kubernetesCluster: 'myaks'
-      command: 'install'
-      chartType: 'Name'
-      chartName: 'psql-chart'
+      displayName: deploy
+      inputs:
+        connectionType: 'Azure Resource Manager'
+        azureSubscription: 'Free Trial(9aa7f2ca-18ba-4733-abc7-a3824511edf0)'
+        azureResourceGroup: 'azuretestrg'
+        kubernetesCluster: 'myaks'
+        command: 'install'
+        chartType: 'Name'
+        chartName: 'psql-chart'
