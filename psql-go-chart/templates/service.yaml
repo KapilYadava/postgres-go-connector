@@ -3,7 +3,7 @@ kind: Service
 metadata:
   name: psql # service name must be same as endpoint name
 spec:
-  clusterIP: 10.96.78.123  # internal service cluster ip
+  clusterIP: 10.0.0.0/16  # internal service cluster ip
   ports:
     - port: 1443  # internal service port
       targetPort: 5432 # external service port (psql port)
